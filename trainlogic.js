@@ -51,7 +51,7 @@ alert("Train added to list");
 
 console.log(newTrain.name);
 console.log(newTrain.destination); 
-console.log(firstTrainMoment);
+console.log(newtrain.firstTrainMoment);
 console.log(newTrain.frequency);
 
 // Clear form fields
@@ -73,10 +73,10 @@ trainInfo.ref().on("child_added", function(childSnapshot, prevChildKey){
 
 // Creates variables for snaphot info
 
-	var trainName = childSnapshot.val().trainName;
-	var trainDest = childSnapshot.val().trainDest;
-	var trainFirst = childSnapshot.val().trainFirst;
-	var trainFreq = childSnapshot.val().trainFreq;
+	var trainName = childSnapshot.val().name;
+	var trainDest = childSnapshot.val().destination;
+	var trainFirst = childSnapshot.val().firstTrain;
+	var trainFreq = childSnapshot.val().frequency;
 
 // Arrival minutes and Modulus
 
